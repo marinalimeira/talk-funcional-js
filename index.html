@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>JS Funcional</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/serif.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+  <body>
+		<div class="reveal">
+			<div class="slides">
+        <span class="footer">@marinalimeira_</span>
+				<section>
+					<h1>JavaScript Funcional</h1>
+				</section>
+
+				<section>
+          <h2>Olar!</h2>
+          <ul class="about">
+            <li>Ciência da Computação <img src="images/ufal.png"></li>
+            <li>Desenvolvedora <img src="images/codeminer.png"></li>
+            <li><a href="http://railsgirls.com/maceio">Rails Girls Maceió</a> <img src="images/rg.png"></li>
+            <br />
+            <li style="font-size: 1.3em;"><a href="http://www.marinalimeira.com">marinalimeira.com</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Agenda</h2>
+          <ul class="agenda">
+            <li class="fragment"><img src="images/javascript.png" /></li>
+            <li class="fragment"><img src="images/function.png" /></li>
+            <li class="fragment"><img src="images/pokemons/pikachu.png" /></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>JavaScript</h2>
+          <h3 class="fragment">Multi-paradigma</h3>
+        </section>
+
+        <section>
+          <h2>Imperativo</h2>
+        </section>
+
+        <section>
+          <h2>Orientado a Objetos</h2>
+          <h3>(com protótipos)</h3>
+        </section>
+
+        <section>
+          <h2>Funcional!</h2>
+        </section>
+
+        <section>
+          <h2>Programação <strong>Funcional</strong>?</h2>
+        </section>
+
+        <section>
+          <h2>Baseado no<br><strong>Cálculo Lambda</strong><span class="fragment">...?</span></h2>
+        </section>
+
+        <section>
+          <h3>"sistema formal que estuda funções recursivas <strong>computáveis</strong></h3>
+          <p class="fragment">[...]</p>
+          <div class="fragment">
+            <h3>entidades que podem ser utilizadas como argumentos e retornadas como valores de outras funções"</h3>
+            <a href="https://pt.wikipedia.org/wiki/C%C3%A1lculo_lambda">- Wikipedia</a>
+          </div>
+        </section>
+
+        <section>
+          <pre>
+            <code data-trim data-noescape>
+fibs :: [Int]
+fibs = 0 : 1 : [ a + b | (a, b) <- zip fibs (tail fibs)]
+            </code>
+          </pre>
+        <h3>alguma_coisa.hs</h3>
+      </section>
+
+      <section>
+        <h2>WAT?</h2>
+      </section>
+
+      <section>
+        <h3>Enquanto uma linguagem funcional como Haskell utiliza recursão, uma linguagem imperativa ou multi-paradigma pode utilizar loops.</h3>
+				</section>
+
+        <section>
+          <h3>"Quando se trata de programação funcional, nós queremos reduzir tudo a uma chamada de função."</h3>
+        </section>
+
+        <section>
+          <h2>Funções <strong class="fragment">puras</strong></h2>
+        <!-- </section> -->
+
+        <!-- <section> -->
+          <!-- <h3 class="fragment">Os dados recebidos não são alterados.</h3> -->
+          <ul>
+            <li class="fragment">Os dados recebidos não são alterados.</li>
+            <li class="fragment">Um novo valor é criado e retornado.</li>
+          </ul>
+          <!-- <h3 class="fragment">Um novo valor é criado e retornado.</h3> -->
+        </section>
+
+        <section>
+          <h3>"Uma relação $f: A \to B$ é uma função quando para qualquer x $\in$ A existe um único $(x,y) \in f$."</h3>
+        </section>
+
+<!--         <section> -->
+<!--           <pre> -->
+<!--             <code data&#45;trim data&#45;noescape class="javascript hljs"> -->
+<!-- //es5 -->
+<!-- var square = function(x) { -->
+<!--   return (x * x); -->
+<!-- } -->
+<!--  -->
+<!-- //es6 -->
+<!-- const square = (x) => (x * x); -->
+<!--             </code> -->
+<!--           </pre> -->
+<!--         </section> -->
+
+
+        <section>
+          <h4>$f: A \to B, onde f(x) = Pokemon.evolve(x)$</h4>
+          $A$<img src="images/pokemons/set-evolution.png" alt="" />$B$
+        </section>
+
+        <section>
+          <h2>Recebe uma entrada $\to$<br>transforma $\to$<br>gera uma saída</h2>
+        </section>
+
+        <section>
+          <div class="func-evolute">
+            <h3>$f$(<img src="images/pokemons/dragonair.png">) = <img src="images/pokemons/dragonite.png"/></h3>
+            <h3 class="fragment">$f$(<img src="images/pokemons/meowth.png">) = <img src="images/pokemons/persian.png"/></h3>
+            <h3 class="fragment">$f$(<img src="images/pokemons/charmander.png">) = <img src="images/pokemons/charmeleon.png"/></h3>
+          </div>
+        </section>
+
+        <section>
+          <h2>Sempre é criado um novo objeto</h2>
+          <h3 class="fragment">Nada de alterar o estado da entrada :)</h3>
+        </section>
+
+        <!-- <section> -->
+          <!-- <h2>Toda entrada gera a mesma saída</h2> -->
+          <!-- <h2 class="fragment">Evitar mutações!</h2> -->
+        <!-- </section> -->
+
+        <section>
+          <h2>Vantagens</h2>
+          <h3 class="fragment">Cache</h3>
+          <h3 class="fragment">Paralelismo</h3>
+        </section>
+
+        <section>
+          <h2>Sequência de Fibonnaci</h2>
+          <h3 class="fragment">O elemento seguinte é a soma dos dois anteriores</h3>
+          <h3 class="fragment">0, 1, 1, 2, 3, 5, 8, 13...</h3>
+        </section>
+
+        <section>
+          <h4>$f: \mathbb Z_{\ge 0} \to \mathbb Z_{\ge 0}, onde f(x) = f(x - 1) + f(x - 2)$</h4>
+          <pre>
+            <code data-trim data-noescape class="javascript hljs">
+const fibonacci = (x) => {
+  if (x === 0 || x === 1) {
+    return x;
+  }
+  return fibonacci(x - 1) + fibonacci(x - 2);
+}
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <p>$fibonnaci(4) \to$<br>$fibbonaci(3) + fibbonaci(2)$</p><br>
+          <p>$fibonnaci(3) \to$<br>$fibbonaci(2) + fibbonaci(1)$</p>
+          <h2 class="fragment">...</h2>
+        </section>
+
+        <section>
+          <h2>Funções de Alta Ordem</h2>
+          <p>a.k.a. High-Order Functions</p>
+        </section>
+
+        <section>
+          <h3>Recebe uma função (ou mais) como argumento;</h3>
+          <h3 class="fragment">Retorna uma função;</h3>
+        </section>
+
+        <section>
+          <!-- <h3>$const evolve = (x) => ();$</h3> -->
+          <pre>
+            <code data-trim data-noescape>
+const evolve = (x) => (Pokemon.evolve(x));
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <img src="images/pokemons/map.png" alt="" />
+        </section>
+
+        <section>
+          <img src="images/pokemons/mapped.png" alt="" />
+        </section>
+
+        <section>
+          <pre>
+            <code data-trim data-noescape>
+const tipoAgua = (x) => (x.tipo === 'water');
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <img src="images/pokemons/filter.png" alt="" />
+        </section>
+
+        <section>
+          <img src="images/pokemons/filtered.png" alt="" />
+        </section>
+
+        <section>
+          <h3>$.map()$ retorna um novo array,</h3>
+          <h3>logo, o Vaporeon não será retornado no $.filter()$ :(</h3>
+        </section>
+
+        <section>
+          <h2>Funções de Primeira Classe</h2>
+          <p>a.k.a. First-Class Functions</p>
+        </section>
+
+        <section>
+          <h3>Funções como valores!</h3>
+          <h3 class="fragment">Afinal, podemos guardá-las em variáveis.</h3>
+        </section>
+
+        <section>
+          <h2>Ternários</h2>
+          <pre>
+            <code>
+console.log(true ? "verdadeiro" : "falso");
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Condicionais</h2>
+          <pre>
+            <code>
+console.log(if(true) { "verdadeiro"; } else { "falso"; });
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3 class="error">SyntaxError: expected expression, got keyword 'if'</h3>
+        </section>
+
+        <section>
+          <img src="images/react.png"/>
+          <h3>React</h3>
+          <!-- virtual dom. -->
+        </section>
+
+        <section>
+          <img src="images/redux.png"/>
+          <h3>Redux</h3>
+<!-- edux attempts to make state mutations predictable by imposing certain restrictions on how and when updates can happen. These restrictions are reflected in the three principles of Redux. -->
+        </section>
+
+        <section>
+          <a href="https://github.com/marinalimeira/eeveelution">github.com/marinalimeira/eeveelution</a>
+        </section>
+          <!-- "coisas funcionais sao mais faceis de ler e manter" -->
+
+        <section>
+          <h2>Obrigada :)</h2>
+          <p><a href="http://marinalimeira.com/">marinalimeira.com<a></p>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+        transition: "fade",
+        math: {
+          mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
