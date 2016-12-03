@@ -138,13 +138,22 @@ fibs = 0 : 1 : [ a + b | (a, b) <- zip fibs (tail fibs)]
 <!--         </section> -->
 
 
-        <section>
-          <h4>$f: A \to B, onde f(x) = Pokemon.evolve(x)$</h4>
+        <section data-background="#cccccc" style="color: #222">
+          <h4 style="color: #222;">$f: A \to B, onde f(x) = Pokemon.evolve(x)$</h4>
           $A$<img src="images/pokemons/set-evolution.png" alt="" />$B$
         </section>
 
         <section>
-          <h2>Recebe uma entrada $\to$<br>transforma $\to$<br>gera uma saída</h2>
+          <h2>E o Eevee?</h2>
+          <img class="fragment eevee" src="images/pokemons/espeon.png" alt="" />
+          <img class="fragment eevee" src="images/pokemons/jolteon.png" alt="" />
+          <img class="fragment eevee" src="images/pokemons/umbreon.png" alt="" />
+          <img class="fragment eevee" src="images/pokemons/vaporeon.png" alt="" />
+          <img class="fragment eevee" src="images/pokemons/flareon.png" alt="" />
+        </section>
+
+        <section>
+          <h2>Recebe uma entrada $\to$<br>transforma $\to$<br>gera nova uma saída</h2>
         </section>
 
         <section>
@@ -156,14 +165,15 @@ fibs = 0 : 1 : [ a + b | (a, b) <- zip fibs (tail fibs)]
         </section>
 
         <section>
+          <div class="func-evolute">
+            <h2>$f$(<img src="images/pokemons/eevee.png">, <img src="images/pokemons/fire-stone.png" alt="" />) = <img src="images/pokemons/flareon.png"/></h2>
+          </div>
+        </section>
+
+        <section>
           <h2>Sempre é criado um novo objeto</h2>
           <h3 class="fragment">Nada de alterar o estado da entrada :)</h3>
         </section>
-
-        <!-- <section> -->
-          <!-- <h2>Toda entrada gera a mesma saída</h2> -->
-          <!-- <h2 class="fragment">Evitar mutações!</h2> -->
-        <!-- </section> -->
 
         <section>
           <h2>Vantagens</h2>
@@ -203,12 +213,15 @@ const fibonacci = (x) => {
         </section>
 
         <section>
+          <h3>$f(g(x))$ === $f \circ g$</h3>
+        </section>
+
+        <section>
           <h3>Recebe uma função (ou mais) como argumento;</h3>
           <h3 class="fragment">Retorna uma função;</h3>
         </section>
 
         <section>
-          <!-- <h3>$const evolve = (x) => ();$</h3> -->
           <pre>
             <code data-trim data-noescape>
 const evolve = (x) => (Pokemon.evolve(x));
@@ -216,11 +229,11 @@ const evolve = (x) => (Pokemon.evolve(x));
           </pre>
         </section>
 
-        <section>
+        <section data-background="#dddddd">
           <img src="images/pokemons/map.png" alt="" />
         </section>
 
-        <section>
+        <section data-background="#dddddd">
           <img src="images/pokemons/mapped.png" alt="" />
         </section>
 
@@ -232,11 +245,11 @@ const tipoAgua = (x) => (x.tipo === 'water');
           </pre>
         </section>
 
-        <section>
+        <section data-background="#dddddd">
           <img src="images/pokemons/filter.png" alt="" />
         </section>
 
-        <section>
+        <section data-background="#dddddd">
           <img src="images/pokemons/filtered.png" alt="" />
         </section>
 
@@ -273,7 +286,7 @@ console.log(if(true) { "verdadeiro"; } else { "falso"; });
           </pre>
         </section>
 
-        <section>
+        <section data-background="#d50000">
           <h3 class="error">SyntaxError: expected expression, got keyword 'if'</h3>
         </section>
 
@@ -289,10 +302,17 @@ console.log(if(true) { "verdadeiro"; } else { "falso"; });
 <!-- edux attempts to make state mutations predictable by imposing certain restrictions on how and when updates can happen. These restrictions are reflected in the three principles of Redux. -->
         </section>
 
+        <section data-background="#cccccc">
+          <img src="images/redux-flow.png" alt="" />
+        </section>
+
+        <section data-background="#cccccc">
+          <img src="images/pokemons/redux-eevee.png" alt="" />
+        </section>
+
         <section>
           <a href="https://github.com/marinalimeira/eeveelution">github.com/marinalimeira/eeveelution</a>
         </section>
-          <!-- "coisas funcionais sao mais faceis de ler e manter" -->
 
         <section>
           <h2>Obrigada :)</h2>

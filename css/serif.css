@@ -16,9 +16,13 @@
   position: relative;
 }
 
-h3.error {
-  color: #d50000 !important;
+img.eevee {
+  height: 150px;
 }
+
+/* h3.error { */
+  /* color: #d50000 !important; */
+/* } */
 
 section img {
   height: 460px;
@@ -60,17 +64,17 @@ li {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #fff; }
+  background: #111;
+  background-color: #111; }
 
 .reveal {
   font-family: "Inconsolata", Palatino, FreeSerif, serif;
   font-size: 36px;
   font-weight: normal;
-  color: #222; }
+  color: #fff; }
 
 ::selection {
-  color: #fff;
+  color: #222;
   background: #26351C;
   text-shadow: none; }
 
@@ -89,7 +93,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #222;
+  color: #fff;
   font-family: "Dosis", "Book Antiqua", Palatino, FreeSerif, serif;
   font-weight: normal;
   line-height: 1.2;
@@ -100,11 +104,11 @@ body {
 
 .reveal h1 {
   font-size: 3.77em;
-  text-shadow: 3px 3px 3px #aaa !important; }
+  text-shadow: 3px 3px 3px #666 !important; }
 
 .reveal h2 {
   font-size: 2.4em;
-  text-shadow: 3px 3px 3px #aaa !important; }
+  text-shadow: 3px 3px 3px #666 !important; }
 
 .reveal h3 {
   font-size: 1.7em; }
