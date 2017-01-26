@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>JS Funcional</title>
+		<title>JavaScript Funcional</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/serif.css">
+		<link rel="stylesheet" href="css/style.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/github.css">
@@ -29,14 +29,14 @@
 					<h1>JavaScript Funcional</h1>
 				</section>
 
-				<section>
-          <h2>Olar!</h2>
+				<section style="float: right;">
+          <h2>Marina Limeira</h2>
           <ul class="about">
-            <li>Ciência da Computação <img src="images/ufal.png"></li>
-            <li>Desenvolvedora <img src="images/codeminer.png"></li>
-            <li><a href="http://railsgirls.com/maceio">Rails Girls Maceió</a> <img src="images/rg.png"></li>
+            <li><img src="images/ufal.png"> &nbsp;Ciência da Computação</li>
+            <li><img src="images/b.png"> &nbsp;Analista de Sistemas</li>
+            <li><img src="images/rg.png"> <a href="http://railsgirls.com/maceio">Rails Girls Maceió</a></li>
             <br />
-            <li style="font-size: 1.3em;"><a href="http://www.marinalimeira.com">marinalimeira.com</a></li>
+            <li><a href="http://www.marinalimeira.com">marinalimeira.com</a></li>
           </ul>
         </section>
 
@@ -99,7 +99,7 @@ fibs = 0 : 1 : [ a + b | (a, b) <- zip fibs (tail fibs)]
       </section>
 
       <section>
-        <h3>Enquanto uma linguagem funcional como Haskell utiliza recursão, uma linguagem imperativa ou multi-paradigma pode utilizar loops.</h3>
+        <h3>Enquanto uma linguagem funcional como <em>Haskell</em> utiliza recursão, uma linguagem imperativa ou multi-paradigma pode utilizar loops.</h3>
 				</section>
 
         <section>
@@ -107,39 +107,29 @@ fibs = 0 : 1 : [ a + b | (a, b) <- zip fibs (tail fibs)]
         </section>
 
         <section>
-          <h2>Funções <strong class="fragment">puras</strong></h2>
-        <!-- </section> -->
-
-        <!-- <section> -->
-          <!-- <h3 class="fragment">Os dados recebidos não são alterados.</h3> -->
+          <h2>Funções <em class="fragment">puras</em></h2>
           <ul>
             <li class="fragment">Os dados recebidos não são alterados.</li>
-            <li class="fragment">Um novo valor é criado e retornado.</li>
           </ul>
-          <!-- <h3 class="fragment">Um novo valor é criado e retornado.</h3> -->
+        </section>
+
+				<section>
+					<h2>Funções <em>puras</em></h2>
+					<ul>
+						<li>Um novo valor é criado e retornado.</li>
+					</ul>
+				</section>
+  
+        <section>
+          <h2>Funções matemáticas!</h2>
         </section>
 
         <section>
           <h3>"Uma relação $f: A \to B$ é uma função quando para qualquer x $\in$ A existe um único $(x,y) \in f$."</h3>
         </section>
 
-<!--         <section> -->
-<!--           <pre> -->
-<!--             <code data&#45;trim data&#45;noescape class="javascript hljs"> -->
-<!-- //es5 -->
-<!-- var square = function(x) { -->
-<!--   return (x * x); -->
-<!-- } -->
-<!--  -->
-<!-- //es6 -->
-<!-- const square = (x) => (x * x); -->
-<!--             </code> -->
-<!--           </pre> -->
-<!--         </section> -->
-
-
-        <section data-background="#cccccc" style="color: #222">
-          <h4 style="color: #222;">$f: A \to B, onde f(x) = Pokemon.evolve(x)$</h4>
+        <section data-background="#fff" style="color: #292C39">
+          <h4 style="color: #292C39;">$f: A \to B, onde f(x) = Pokemon.evolve(x)$</h4>
           $A$<img src="images/pokemons/set-evolution.png" alt="" />$B$
         </section>
 
@@ -172,13 +162,10 @@ fibs = 0 : 1 : [ a + b | (a, b) <- zip fibs (tail fibs)]
 
         <section>
           <h2>Sempre é criado um novo objeto</h2>
-          <h3 class="fragment">Nada de alterar o estado da entrada :)</h3>
         </section>
 
         <section>
-          <h2>Vantagens</h2>
-          <h3 class="fragment">Cache</h3>
-          <h3 class="fragment">Paralelismo</h3>
+          <h2>Nada de alterar o estado da entrada :)</h2>
         </section>
 
         <section>
@@ -205,6 +192,7 @@ const fibonacci = (x) => {
           <p>$fibonnaci(4) \to$<br>$fibbonaci(3) + fibbonaci(2)$</p><br>
           <p>$fibonnaci(3) \to$<br>$fibbonaci(2) + fibbonaci(1)$</p>
           <h2 class="fragment">...</h2>
+          <h3 class="fragment">Cache!</h3>
         </section>
 
         <section>
@@ -217,9 +205,15 @@ const fibonacci = (x) => {
         </section>
 
         <section>
-          <h3>Recebe uma função (ou mais) como argumento;</h3>
-          <h3 class="fragment">Retorna uma função;</h3>
+					<h2>Funções de Alta Ordem</h2>
+          <li>Recebem uma função (ou mais) como argumento</li>
+
         </section>
+
+				<section>
+					<h2>Funções de Alta Ordem</h2>
+          <ul><li>Retornam uma função</li></ul>
+				</section>
 
         <section>
           <pre>
@@ -229,11 +223,11 @@ const evolve = (x) => (Pokemon.evolve(x));
           </pre>
         </section>
 
-        <section data-background="#dddddd">
+        <section data-background="#fff">
           <img src="images/pokemons/map.png" alt="" />
         </section>
 
-        <section data-background="#dddddd">
+        <section data-background="#fff">
           <img src="images/pokemons/mapped.png" alt="" />
         </section>
 
@@ -245,11 +239,11 @@ const tipoAgua = (x) => (x.tipo === 'water');
           </pre>
         </section>
 
-        <section data-background="#dddddd">
+        <section data-background="#fff">
           <img src="images/pokemons/filter.png" alt="" />
         </section>
 
-        <section data-background="#dddddd">
+        <section data-background="#fff">
           <img src="images/pokemons/filtered.png" alt="" />
         </section>
 
@@ -264,9 +258,14 @@ const tipoAgua = (x) => (x.tipo === 'water');
         </section>
 
         <section>
-          <h3>Funções como valores!</h3>
-          <h3 class="fragment">Afinal, podemos guardá-las em variáveis.</h3>
+					<h2>Funções de Primeira Classe</h2>
+          <li>Funções como valores!</li>
         </section>
+
+				<section>
+					<h2>Funções de Primeira Classe</h2>
+					<li>Logo, podemos guardá-las em variáveis.</li>
+				</section>
 
         <section>
           <h2>Ternários</h2>
@@ -291,8 +290,12 @@ console.log(if(true) { "verdadeiro"; } else { "falso"; });
         </section>
 
         <section>
+          <h2>Elixir</h2>
+        </section>
+
+        <section data-background="#fff">
           <img src="images/react.png"/>
-          <h3>React</h3>
+          <h2>React</h2>
           <!-- virtual dom. -->
         </section>
 
@@ -302,11 +305,11 @@ console.log(if(true) { "verdadeiro"; } else { "falso"; });
 <!-- edux attempts to make state mutations predictable by imposing certain restrictions on how and when updates can happen. These restrictions are reflected in the three principles of Redux. -->
         </section>
 
-        <section data-background="#cccccc">
+        <section data-background="#fff">
           <img src="images/redux-flow.png" alt="" />
         </section>
 
-        <section data-background="#cccccc">
+        <section data-background="#fff">
           <img src="images/pokemons/redux-eevee.png" alt="" />
         </section>
 

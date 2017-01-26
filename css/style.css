@@ -5,7 +5,7 @@
  * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
  */
 
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Dosis');
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
 /* CUSTOM CSS */
 
@@ -64,11 +64,11 @@ li {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #111;
-  background-color: #111; }
+  background: #34CDD7;
+  background-color: #34CDD7; }
 
 .reveal {
-  font-family: "Inconsolata", Palatino, FreeSerif, serif;
+  font-family: "Open Sans",serif;
   font-size: 36px;
   font-weight: normal;
   color: #fff; }
@@ -92,23 +92,25 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  margin: 0 0 20px 0;
+  margin: 0;
   color: #fff;
-  font-family: "Dosis", "Book Antiqua", Palatino, FreeSerif, serif;
-  font-weight: normal;
+  font-family: "Lato", "Book Antiqua", Palatino, FreeSerif, serif;
+  /*font-weight: normal;
   line-height: 1.2;
-  letter-spacing: normal;
+  letter-spacing: normal;*/
   text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
   font-size: 3.77em;
-  text-shadow: 3px 3px 3px #666 !important; }
+/*text-shadow: 3px 3px 3px #666 !important;*/ }
 
 .reveal h2 {
   font-size: 2.4em;
-  text-shadow: 3px 3px 3px #666 !important; }
+  color: #15161D;
+  font-weight: 900;
+/*text-shadow: 3px 3px 3px #666 !important;*/ }
 
 .reveal h3 {
   font-size: 1.7em; }
@@ -260,12 +262,12 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00838F;
+  color: #292C39;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease;  }
 .reveal a:hover {
-  color: #2E2633;
+  color: #247E84;
   text-shadow: none;
   border: none; }
 
@@ -278,7 +280,7 @@ body {
  *********************************************/
 .reveal section img {
   margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
+  /* background: rgba(255, 255, 255, 0.12); */
 }
 
 .reveal section img.plain {
